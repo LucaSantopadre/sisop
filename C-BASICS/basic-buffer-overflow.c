@@ -1,18 +1,26 @@
 #include <stdio.h>
 
-int control_variable;
 int v[10];
+int control_variable;
 
 int main(int argc, char * argv[]){
 
 	int index, value;
 
 #ifdef IN_STACK
-	int control_variable;
 	int v[10];
+	int control_variable;
+
+
 #endif
 
 	control_variable = 1;
+	
+	printf("v:                   %p\n",v);
+	printf("indirizzo v[10]:     %p\n",&(v[10]));
+	printf("indirizzo control_v: %p\n",&control_variable);
+
+
 
 	while (control_variable == 1){
 		scanf("%d%d",&index,&value);
