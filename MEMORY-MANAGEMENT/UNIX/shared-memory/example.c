@@ -36,7 +36,7 @@ void produttore(int id) {
    printf("insert strings to write to shared memory ('quit' to close): \n");
 
    do{
-     scanf("%127s", messaggio);
+     scanf("%127s", messaggio);   // shared memory come buffer   scrivo al piu 127 + 1(terminatore)  byte!!  ogni pag 4K!!!  
      memcpy(addr1, messaggio, DISP);
      addr1 = addr1 + DISP;
    }
@@ -62,7 +62,7 @@ void consumatore(int id) {
 
     while( (strcmp(addr1,"quit") != 0) && ((addr1 - addr) < (SIZE - DISP)))
     {
-     printf("%s \n", addr1);
+     printf("%s \n", addr1);     // su ogni slot stampo
      addr1 = addr1 + DISP;
     }
    exit(0);
