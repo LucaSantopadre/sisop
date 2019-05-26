@@ -64,8 +64,8 @@ int main(int argc, char** argv){
    while(1){
 	printf("please give me the priority level you would prefer\n");
 	scanf("%d",&prio);
-	ret = setpriority(PRIO_PROCESS,0,prio);//this will not affect other threads
-//	ret = setpriority(PRIO_PGRP,0,prio);
+//	ret = setpriority(PRIO_PROCESS,0,prio);//this will not affect other threads
+	ret = setpriority(PRIO_PGRP,0,prio);
 	printf("priority set returns %d\n",ret);
 	ret = getpriority(PRIO_PROCESS,0);
 	printf("new priority is %d\n",ret);
