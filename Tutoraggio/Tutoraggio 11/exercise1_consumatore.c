@@ -51,8 +51,8 @@ int main()
 
 	union semun sem_arg;
 
-	shm_key = 6868;
-	sem_key = 3232;
+	shm_key = 512;
+	sem_key = 6464;
 
 	if ((shm_ds = shmget(shm_key, SHMEMSIZE, IPC_CREAT|0666)) == -1) {
 		printf("Errore. Impossibile allocare la memoria condivisa.\n");

@@ -45,8 +45,8 @@ int main()
 	key_t shm_key, sem_key;
 	void *shm_addr;
 
-	shm_key = 6868;
-	sem_key = 3232;
+	shm_key = 3232;
+	sem_key = 6464;
 
 	if ((shm_ds = shmget(shm_key, SHMEMSIZE, 0)) == -1) {
 		printf("Errore. Impossibile reperire la memoria condivisa.\n");
