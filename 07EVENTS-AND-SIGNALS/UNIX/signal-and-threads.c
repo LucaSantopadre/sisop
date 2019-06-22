@@ -42,6 +42,7 @@ int main(int argc, char **argv){
   while(1) {
 	pause();
 	printf("I'm thread main\n");
+	sleep(2);
   }
 
 
