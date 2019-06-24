@@ -11,8 +11,28 @@ N = strtol(argv[1],NULL,10); // in N c'è un long
 THREAD
 int pthread_join(pthread_t thread, void **retval);
 
-int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
-                          void *(*start_routine) (void *), void *arg);
+int pthread_create(pthread_t *thread, const pthread_attr_t *attr,  oid *(*start_routine) (void *), void *arg);
+
+
+
+int fd = open(file_name, O_CREAT | O_TRUNC | O_RDWR, 0666);
+
+
+
+
+// leggere file
+FILE *file;
+char *segment = malloc(128);
+file = fopen(nome_file, "r+");
+
+	while (fscanf(f,"%s",segment) != EOF){
+		printf("read %s\n",segment);
+		segment += strlen(segment)+1;
+	}
+
+
+
+
 
 
 

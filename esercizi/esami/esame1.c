@@ -100,8 +100,4 @@ int main(int argc, char* argv[]){
 	shmctl(descr, IPC_RMID, NULL);
 	exit(0);
 
-
-
-
-
 }
