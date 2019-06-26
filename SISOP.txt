@@ -18,20 +18,22 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,  oid *(*start_
 int fd = open(file_name, O_CREAT | O_TRUNC | O_RDWR, 0666);
 
 
-
-
-// leggere file
-FILE *file;
-char *segment = malloc(128);
-file = fopen(nome_file, "r+");
-
-	while (fscanf(f,"%s",segment) != EOF){
-		printf("read %s\n",segment);
-		segment += strlen(segment)+1;
-	}
+extern char** environ;
 
 
 
+
+
+
+
+luca@lucapc ~ $ man execlp
+luca@lucapc ~ $ man strtok
+luca@lucapc ~ $ man getpriority
+luca@lucapc ~ $ man lseek
+luca@lucapc ~ $ man dup
+luca@lucapc ~ $ man fsync
+luca@lucapc ~ $ man brk
+luca@lucapc ~ $ 
 
 
 
